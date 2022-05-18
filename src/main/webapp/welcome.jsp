@@ -1,18 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ page import = "java.util.Date" %>
+<%@ page import = "java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Welcome</title>
 <!-- Latest compiled and minified CSS -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Latest compiled JavaScript -->
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
@@ -23,7 +22,7 @@
 		</div>
 	</nav>
 	<%!// 변수 또는 메서드 선언
-	String greeting = "Welcome to Web Shopping Mall";
+	String greeting = "웹 쇼핑몰에 오신 것을 환영합니다.";
 	String tagline = "Welcome to Web Market!";%>
 
 	<!-- mt-4 p-5 bg-primary text-white rounded = jumbotron, bootstrap5이상 부터 지원 -->
@@ -40,6 +39,12 @@
 	<div class="container">
 		<div class="text-center">
 			<h3><%=tagline%></h3>
+			<%
+			Date today = new Date();
+			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
+			
+			out.println("현재 접속 시간: " + format.format(today));
+			%>
 		</div>
 	</div>
 
