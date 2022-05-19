@@ -1,36 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<%@ page import = "java.util.Date" %>
-<%@ page import = "java.text.SimpleDateFormat" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Welcome</title>
 <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="./welcome.jsp">Home</a>
-			</div>
-		</div>
-	</nav>
-	<%!// º¯¼ö ¶Ç´Â ¸Þ¼­µå ¼±¾ð
-	String greeting = "À¥ ¼îÇÎ¸ô¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù.";
+	<%!// ë³€ìˆ˜ ë˜ëŠ” ë©”ì„œë“œ ì„ ì–¸.
+	String greeting = "ì›¹ ì‡¼í•‘ëª°ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.";
 	String tagline = "Welcome to Web Market!";%>
-
-	<!-- mt-4 p-5 bg-primary text-white rounded = jumbotron, bootstrap5ÀÌ»ó ºÎÅÍ Áö¿ø -->
-	<!-- bg-primary : ±âº» »ö»ó, text-white : ±ÛÀÚ ÇÏ¾é°Ô  -->
+	<!-- mt-4 p-5 bg-primary text-white rounded = jumbotron, bootstrap5ì´ìƒ ë¶€í„° ì§€ì› -->
+	<!-- bg-primary : ê¸°ë³¸ ìƒ‰ìƒ, text-white : ê¸€ìž í•˜ì–—ê²Œ  -->
 	<div class="p-5 bg-primary text-white">
-		<!-- container : ÁÂ¿ì °¡¿îµ¥ Á¤·Ä -->
+		<!-- container : ì¢Œìš° ê°€ìš´ë° ì •ë ¬ -->
 		<div class="container">
-			<!-- display-3 : Å« ±ÛÀÚ Áß¿¡ º¸Åë Å©±â -->
+			<!-- display-3 : í° ê¸€ìž ì¤‘ì— ë³´í†µ í¬ê¸° -->
 			<h1 class="display-3">
 				<%=greeting%>
 			</h1>
@@ -42,14 +34,11 @@
 			<%
 			Date today = new Date();
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
-			
-			out.println("ÇöÀç Á¢¼Ó ½Ã°£: " + format.format(today));
+
+			out.println("í˜„ìž¬ ì ‘ì† ì‹œê°„: " + format.format(today));
 			%>
 		</div>
 	</div>
-
-	<footer class="container">
-		<p>&copy; WebMarket</p>
-	</footer>
+	<!-- jsp file ë§Œë“¤ì–´ì„œ file ë‚´ body íƒœê·¸ ì•ˆì— ìžˆëŠ” ê¸°ëŠ¥ ë¶ˆëŸ¬ì˜¤ê¸° -->
 </body>
 </html>
