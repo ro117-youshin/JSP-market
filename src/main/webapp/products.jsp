@@ -23,7 +23,6 @@
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
-	<jsp:include page="welcome.jsp" />
 	<%
 	List<Product> products = repository.getAllProducts();
 	%>

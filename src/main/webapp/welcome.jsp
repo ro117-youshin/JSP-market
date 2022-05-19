@@ -9,11 +9,15 @@
 <meta charset="UTF-8">
 <title>Welcome</title>
 <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+	<jsp:include page="menu.jsp" />
 	<%!// 변수 또는 메서드 선언.
 	String greeting = "웹 쇼핑몰에 오신 것을 환영합니다.";
 	String tagline = "Welcome to Web Market!";%>
