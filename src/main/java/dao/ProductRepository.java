@@ -41,4 +41,14 @@ public class ProductRepository {
 	public List<Product> getAllProducts(){
 		return products;
 	}
+	
+	// ID로 상품 찾기
+	public Product getProductById(String productId) {
+		// 원래 코드는 책 p.173 for문 참고할 것
+		return products.stream() // 상품 3개가 흘러 간다.
+				.filter((product) -> product.getProductId().equals(productId)) // 흘러갈 때 걸러질 그물망, 화살표 다음이 조건
+				.findFirst() // filter에서 첫번째 것
+				.get(); // 얻기
+		
+	}
 }
