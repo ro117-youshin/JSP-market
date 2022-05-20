@@ -6,8 +6,7 @@
 <!-- class를 생성해서 안에 있는 데이터를 id의 이름으로 가져다가 쓰겠다. -->
 <!-- scope의 application은 서버가 끝날 때 까지, page는 페이지가 넘어갈 때만, session은 class 내용을 서버측에 저장 -->
 <!--  -->
-<jsp:useBean id="repository" class="dao.ProductRepository"
-	scope="session"></jsp:useBean>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +23,7 @@
 <body>
 	<jsp:include page="menu.jsp" />
 	<%
+	ProductRepository repository = ProductRepository.getInstance();
 	List<Product> products = repository.getAllProducts();
 	%>
 	<div class="container">

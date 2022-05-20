@@ -9,12 +9,9 @@
 <meta charset="UTF-8">
 <title>Welcome</title>
 <!-- Latest compiled and minified CSS -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-	rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Latest compiled JavaScript -->
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
@@ -36,7 +33,11 @@
 		<div class="text-center">
 			<h3><%=tagline%></h3>
 			<%
+			// 5초에 한번 씩 새로고침
+			response.setIntHeader("Refresh", 5);
+			
 			Date today = new Date();
+			
 			SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
 
 			out.println("현재 접속 시간: " + format.format(today));

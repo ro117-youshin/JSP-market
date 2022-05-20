@@ -8,6 +8,14 @@ import dto.Product;
 public class ProductRepository {
 	private List<Product> products = new ArrayList<>();
 	
+	// 하나의 객체를 생성 후 인스턴스를 재사용하는 싱글턴 패턴
+	// 클래스 입장에서 아무 상관 없는 코드, 어떠한 클래스에 가져다 놔도 상관 없다. 저장되는 위치가 다르다.
+	private static ProductRepository instance = new ProductRepository();
+	
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
 	public ProductRepository() {
 		// 원래는 DB에서 가져올 DATA
 		// DB를 배우지 않아 만든 코드
@@ -50,5 +58,10 @@ public class ProductRepository {
 				.findFirst() // filter에서 첫번째 것
 				.get(); // 얻기
 		
+	}
+	
+	//상품 추가
+	public void addProduct(Product product) {
+		products.add(product);
 	}
 }
