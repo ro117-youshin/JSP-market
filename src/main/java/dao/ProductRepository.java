@@ -19,26 +19,26 @@ public class ProductRepository {
 	public ProductRepository() {
 		// 원래는 DB에서 가져올 DATA
 		// DB를 배우지 않아 만든 코드
-		Product phone = new Product("P1234", "iPhone 6s", 800000);
-		phone.setDescription("4.7-inch, 1334X750 Retina HD display, processor");
+		Product phone = new Product("p1234", "iPhone 13 Pro", 1350000);
+		phone.setDescription("15.4cm, ProMotion OLED display");
 		phone.setCategory("Smart Phone");
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
 		
-		Product notebook = new Product("L1234", "LG PC 그램", 1500000);
-		notebook.setDescription("4.7-inch, 1334X750 Retina HD display, processor");
-		notebook.setCategory("Notebook");
-		notebook.setManufacturer("LG");
+		Product notebook = new Product("m1234", "Mac Air", 1630000);
+		notebook.setDescription("33.7cm, LED BackLight Display IPS technology, Apple M1");
+		notebook.setCategory("notebook");
+		notebook.setManufacturer("Apple");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("New");
 		
-		Product tablet = new Product("I1234", "iPad", 900000);
-		tablet.setDescription("4.7-inch, 1334X750 Retina HD display, processor");
+		Product tablet = new Product("i1234", "iPad mini", 649000);
+		tablet.setDescription("8.3-inch, Liquid Retina display, Neural Engine A15 Bionic");
 		tablet.setCategory("tablet");
 		tablet.setManufacturer("Apple");
 		tablet.setUnitsInStock(1000);
-		tablet.setCondition("Old");
+		tablet.setCondition("New");
 		
 		products.add(phone);
 		products.add(notebook);
@@ -57,7 +57,6 @@ public class ProductRepository {
 				.filter((product) -> product.getProductId().equals(productId)) // 흘러갈 때 걸러질 그물망, 화살표 다음이 조건
 				.findFirst() // filter에서 첫번째 것
 				.get(); // 얻기
-		
 	}
 	
 	//상품 추가

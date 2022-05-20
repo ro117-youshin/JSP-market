@@ -1,7 +1,5 @@
 package dto;
 
-import java.io.Serializable;
-
 // 모델 클래스
 // JSP : 자바빈즈 (getter/setter, 기본 생성자, Serializable)
 public class Product {

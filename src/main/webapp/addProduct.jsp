@@ -38,6 +38,12 @@
 				</div>
 			</div>
 			<div class="form-group row">
+				<label class="col-sm-2">설명</label>
+				<div class="col-sm-3">
+					<input type="text" name="description" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
 				<label class="col-sm-2">가격</label>
 				<div class="col-sm-3">
 					<input type="text" name="unitPrice" class="form-control">

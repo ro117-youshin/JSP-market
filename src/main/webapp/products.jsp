@@ -23,6 +23,9 @@
 <body>
 	<jsp:include page="menu.jsp" />
 	<%
+	/* out.println(session.getAttribute("name"));
+	out.println(session.getAttribute("age")); */
+	
 	ProductRepository repository = ProductRepository.getInstance();
 	List<Product> products = repository.getAllProducts();
 	%>
@@ -36,7 +39,7 @@
 					<p><%= product.getDescription() %> </p>
 					<p><%= product.getUnitPrice() %>원 </p>
 					<p>
-						<a class = "btn btn-secondary" role = "button" href="./product.jsp?id=<%= product.getProductId() %>">
+						<a class = "btn btn-secondary" role = "button" href="./product.jsp?id=<%=product.getProductId()%>">
 							상세 정보 &raquo;
 						</a>
 					</p>
