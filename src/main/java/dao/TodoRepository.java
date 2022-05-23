@@ -18,13 +18,13 @@ public class TodoRepository {
     public List<Todo> getTodos() {
         return todos;
     }
-
+    // 추가하는 로직
     public void addTodo(Todo todo) {
         todo.setId(currentId);
         currentId++;
         todos.add(todo);
     }
-
+    // 토글 로직
     public void toggle(long id) {
         for (Todo todo : todos) {
             if (todo.getId() == id) {
@@ -33,7 +33,7 @@ public class TodoRepository {
             }
         }
     }
-
+    // 삭제하는 로직
     public void remove(long id) {
         Todo removeTodo = null;
         for (Todo todo : todos) {
