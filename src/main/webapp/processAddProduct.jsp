@@ -13,6 +13,7 @@ String description = request.getParameter("description");
 
 Product newProduct = new Product(productId, name, unitPrice);
 newProduct.setDescription(description);
+
 ProductRepository repository = ProductRepository.getInstance();
 repository.addProduct(newProduct);
 
